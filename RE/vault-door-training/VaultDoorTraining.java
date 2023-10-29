@@ -3,16 +3,16 @@ import java.util.*;
 class VaultDoorTraining {
     public static void main(String args[]) {
         VaultDoorTraining vaultDoor = new VaultDoorTraining();
-        Scanner scanner = new Scanner(System.in); 
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter vault password: ");
         String userInput = scanner.next();
-	String input = userInput.substring("NeSE{".length(),userInput.length()-1);
-	if (vaultDoor.checkPassword(input)) {
-	    System.out.println("Access granted.");
-	} else {
-	    System.out.println("Access denied!");
-	}
-   }
+        String input = userInput.substring("NeSE{".length(), userInput.length());
+        if (vaultDoor.checkPassword(input)) {
+            System.out.println("Access granted.");
+        } else {
+            System.out.println("Access denied!");
+        }
+    }
 
     // The password is below. Is it safe to put the password in the source code?
     // What if somebody stole our source code? Then they would know what our
@@ -24,3 +24,5 @@ class VaultDoorTraining {
         return password.equals("w4rm1ng_Up_w1tH_jAv4_be8d9806f18");
     }
 }
+
+// 我修改了函数，能进入系统里，然后呢？做什么呢？
