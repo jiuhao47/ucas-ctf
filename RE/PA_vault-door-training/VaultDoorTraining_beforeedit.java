@@ -6,12 +6,13 @@ class VaultDoorTraining {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter vault password: ");
         String userInput = scanner.next();
-        String input = userInput.substring("NeSE{".length(), userInput.length());
+        String input = userInput.substring("NeSE{".length(), userInput.length() - 1);
         if (vaultDoor.checkPassword(input)) {
             System.out.println("Access granted.");
         } else {
             System.out.println("Access denied!");
         }
+        scanner.close();
     }
 
     // The password is below. Is it safe to put the password in the source code?
@@ -24,5 +25,4 @@ class VaultDoorTraining {
         return password.equals("w4rm1ng_Up_w1tH_jAv4_be8d9806f18");
     }
 }
-
-// 我修改了函数，能进入系统里，然后呢？做什么呢？
+// 不难做，只是理解题意上有些困难，其实就是找到正确的输入
