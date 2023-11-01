@@ -1,6 +1,5 @@
-#!/usr/bin/env python3
-
 # from secret import flag
+flag = "NeSE{I_stand_ready_123456:)}"
 
 
 def encrypt(key, pt):
@@ -17,6 +16,6 @@ def encrypt(key, pt):
 
 
 key = "welcome_to_the_crypto_world!"
-# ct = encrypt(key, flag)
+ct = encrypt(key, flag)
 
-# print(ct)
+print(ct)

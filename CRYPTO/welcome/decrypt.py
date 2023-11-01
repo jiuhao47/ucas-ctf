@@ -25,3 +25,5 @@ def decrypt(key, ct):
 
 pt = decrypt(key, ctxt_1.content)
 print(pt)
+
+# 没找出哪里写错了，于是乎打表出奇迹，凑出了flag
