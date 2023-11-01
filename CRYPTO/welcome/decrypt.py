@@ -1,5 +1,5 @@
 key = "welcome_to_the_crypto_world!"
-ctxt_1 = open("E:/VSCODE/UCAS_CTF/CRYPTO/welcome/output.txt", "r", encoding="utf-8")
+ctxt_1 = open("./output.txt", "r")
 ctxt_1.content = ctxt_1.read()
 
 
@@ -12,10 +12,11 @@ def decrypt(key, ct):
     pt = ""
     for i in range(len(ct)):
         pt += chr(
-            (ord(ct[i]) - 0x20)
-            + (0x7E - 0x20 + 1)
-            + 0x20
-            - (ord(key[i % len(key)]))
+            (
+                ((ord(ct[i]) - 0x20) + (0x7E - 0x20 + 1))
+                + 0x20
+                - (ord(key[i % len(key)]))
+            )
             + 0x20
         )
 
