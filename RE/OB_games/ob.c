@@ -42,5 +42,5 @@ int main()
 }
 int check(int x, int y)
 {
-    return ((0xff + y * 8) >> (x & 0b00111111)) & 0b00000001;
+    return ((0x0000555555556040 + y * 8) >> (x & 0b00111111)) & 0b00000001;
 }

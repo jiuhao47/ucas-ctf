@@ -28,3 +28,5 @@ print(ct)
 # 打印密文
 
 # print("The FLAG is NeSE{" + str(pt[0]) + str(pt[1]) + "}")
+# 解密过程
+# m=pt+k*pk-(k*G/G)*pk
