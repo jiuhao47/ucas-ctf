@@ -9,3 +9,6 @@ r.sendline(
 )
 
 r.interactive()
+
+# 网上抄的shellcode，哭
+# 没太理解shellcode的构造原理
