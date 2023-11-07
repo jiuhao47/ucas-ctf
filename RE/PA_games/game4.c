@@ -46,5 +46,9 @@ undefined8 Game4(void)
     return uVar1;
 }
 
-//orcat ssm ehtnuo nia uoy eesruoynis ereclos oituha n321a7654ba98
-//89ab4567a123n ahutio solcere sinyoursee you ain ounthe mss tacor????
+// orcat ssm ehtnuo nia uoy eesruoynis ereclos oituha n321a7654ba98
+// orcat ssm ehtnuo nia uoy eesruoynis ereclos oituha n321a7654ba98
+// 89ab4567a123n ahutio solcere sinyoursee you ain ounthe mss tacor????
+// 89ab4567a123n ahutio solcere sinyoursee you ain ounthe mss tacro
+a123456789ab
+    across the mountain you see your sincere solution ahu
