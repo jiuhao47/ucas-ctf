@@ -1,0 +1,54 @@
+
+asm4(char* s)
+s := "NeSE_a3112" // ebp+8
+
+uint x=0x246 // ebp-0x10
+uint i=0 // ebp-0xc
+
+// 23 27 138 51 jtarget
+
+goto first;
+second:
+{
+    // 23
+    i+=1;
+}
+
+first:
+{
+    //edx=i; // 27
+    // eax=str; //30
+    eax = str[i]; // 35
+    if(eax!=0) {
+        goto second;
+    }
+}
+// i = strlen(str) = 10
+
+// 42
+uint y = 1; // ebp-8
+goto beta;
+alpha:
+// 51
+edx = (int)(char)str[y];
+ecx=y-1;
+eax=(int)(char)str[y-1] // 71
+edx = (int)(char)str[y]-(int)(char)str[y-1];//82
+eax=x
+ebx=edx+x
+edx=(int)(char)str[y+1];//108
+eax=(int)(char)str[y];//122
+eax=(int)(char)str[y+1]-(int)(char)str[y] + ebx;
+x = x + (int)(char)str[y+1]-(int)(char)str[y-1];
+y+=1 //134
+;
+// 138
+beta:
+if(y < i-1) {
+    goto alpha;
+}
+return x;
+
+
+//Made by 王荣庆学长
+//我以后得做明白才行
