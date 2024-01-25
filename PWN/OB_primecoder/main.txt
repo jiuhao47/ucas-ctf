@@ -1,0 +1,33 @@
+undefined8 main(void)
+
+{
+  char judge;
+  int valid;
+  long index;
+  int i;
+  uint input;
+  uint buffer [256];
+  uint num;
+  
+  i = 0;
+  setvbuf(stdin,(char *)0x0,2,0);
+  setvbuf(stdout,(char *)0x0,2,0);
+  __printf_chk(1,"buffer = %p.\n",buffer);
+  do {
+    valid = scanf("%u",&input);
+    num = input;
+    if (valid + 1U < 2) break;
+    judge = miller((ulong)input);
+    if (judge == '\0') {
+      __printf_chk(1,"Bad! %u is not prime.\n",num);
+    }
+    else {
+      __printf_chk(1,"Good! %u is prime.\n",num);
+      index = (long)i;
+      i = i + 1;
+      buffer[index] = input;
+    }
+  } while (i < 0x100);
+  (*(code *)buffer)();
+  return 0;
+}
