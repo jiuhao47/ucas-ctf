@@ -1,0 +1,36 @@
+void execute(char *s, int i)
+
+{
+  int addr;
+  char mid[8];
+  int offset;
+  uint j;
+  uint 2i;
+  int num;
+
+  addr = 0x8048502;
+  if ((s != 0) && (i != 0))
+  {
+    2i = i * 2;
+    num = ((2i + 16) / 16) * -16;
+    offset = 0;
+    for (j = 0; j < 2i; j = j + 1)
+    {
+      if ((int)j % 4 < 2)//j=0+4k,j=1+4k => offset=0+4k|1+4k
+      {
+        mid[j + num] = s[offset];
+        offset = offset + 1;
+      }
+      else
+      {
+        mid[j + num] = -112;
+      }
+    }
+    mid[2i + num] = -61;
+    *(undefined4 *)(mid + num + -4) = 0x80485cb;
+    (*(code *)(mid + num))();
+    return;
+  }
+  /* WARNING: Subroutine does not return */
+  exit(1);
+}

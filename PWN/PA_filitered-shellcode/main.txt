@@ -1,0 +1,30 @@
+undefined4 main(void)
+
+{
+  int input;
+  char s[1000];
+  char c_input;
+  uint i;
+  undefined *local_10;
+
+  local_10 = &stack0x00000004;
+  setbuf(_stdout, (char *)0x0);
+  i = 0;
+  c_input = 0;
+  puts("Give me code to run:");
+  input = fgetc(_stdin);
+  c_input = (char)input;
+  for (; (c_input != '\n' && (i < 1000)); i = i + 1)
+  {
+    s[i] = c_input;
+    input = fgetc(_stdin);
+    c_input = (char)input;
+  }
+  if ((i & 0x1) != 0)
+  {
+    s[i] = -112;
+    i = i + 1;
+  }
+  execute(s, i);
+  return 0;
+}
