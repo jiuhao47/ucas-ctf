@@ -1,4 +1,4 @@
-undefined8 main(void)
+int main(void)
 
 {
   char judge;
