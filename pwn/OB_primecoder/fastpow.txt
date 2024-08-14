@@ -1,0 +1,16 @@
+longlong fast_pow(int prime,longlong i,longlong input)
+
+{
+  longlong ret;
+  
+  if (i == 0) {
+    return 1;
+  }
+  ret = fast_pow(prime,i / 2,input);
+  ret = multimod(ret,ret,input);
+  if ((i & 1U) != 0) {
+    ret = multimod(ret,(long)prime,input);
+    return ret;
+  }
+  return ret;
+}

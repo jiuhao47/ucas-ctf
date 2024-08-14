@@ -1,0 +1,13 @@
+services:
+  server:
+    build: .
+    restart: always
+    container_name: chall
+    volumes:
+      - ./flag:/src/flag
+    ports:
+      - 20001:20001
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2048m"

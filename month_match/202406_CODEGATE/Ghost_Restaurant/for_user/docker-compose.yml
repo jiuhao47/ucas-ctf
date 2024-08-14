@@ -1,0 +1,9 @@
+services:
+  ghost_restaurant:
+    build:
+      context: ./
+    ports:
+       - "1337:1337"
+    restart: always
+
+

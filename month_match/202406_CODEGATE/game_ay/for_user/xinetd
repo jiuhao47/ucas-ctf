@@ -1,0 +1,12 @@
+service gamesay
+{
+    disable = no
+    flags = REUSE
+    socket_type = stream
+    protocol = tcp
+    user = gamesay
+    wait = no
+    server = /src/run.sh
+    type = UNLISTED
+    port = 20001
+}

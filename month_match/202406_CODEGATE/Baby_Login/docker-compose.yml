@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+    chall:
+      build: .
+      ports:
+        - "8081:8081"
+      volumes:
+        - ./xinetd:/etc/xinetd.d/ctf

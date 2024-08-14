@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  physical_test:
+    build:
+      context: ./
+    ports:
+        - "4132:4132"
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '4.0'
+
+

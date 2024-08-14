@@ -1,0 +1,48 @@
+services:
+  chall:
+    build: ./chall
+    restart: always
+    container_name: chall-chall
+    environment:
+      - SOCK_FILE_LOC=/socket/chall.sock
+    ports:
+      - 2222:2222
+    volumes:
+      - ./socket:/socket
+
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2048m"
+
+  server:
+    build: ./server
+    restart: always
+    container_name: chall-server
+    environment:
+      - DB_USER=root
+      - DB_PW=codegate12#$
+      - SOCK_FILE_LOC=/socket/chall.sock
+    volumes:
+      - ./flag:/flag
+      - ./socket:/socket
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2048m"
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - "127.0.0.1:27017:27017"
+    container_name: chall-mongo
+    volumes:
+      - ./mongodb:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=codegate12#$
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2048m"

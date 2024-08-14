@@ -1,0 +1,7 @@
+version: '2'
+services:
+  100levels:
+    build: .
+    ports:
+      - 31048:5000
+    privileged: true
