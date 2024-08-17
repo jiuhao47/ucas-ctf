@@ -1,0 +1,23 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sat Aug 17 11:42:44 2024
+Invocation: foremost flag.png 
+Output directory: /home/jiuhao/workspace/ucas_ctf/month_match/202408/misc/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: flag.png
+Start: Sat Aug 17 11:42:44 2024
+Length: 6 KB (6971 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000013.zip 	      216 B 	       6743 	 
+Finish: Sat Aug 17 11:42:44 2024
+
+1 FILES EXTRACTED
+	
+zip:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sat Aug 17 11:42:44 2024

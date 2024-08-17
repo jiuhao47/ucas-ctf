@@ -1,0 +1,2 @@
+你的朋友掏出了一副扑克并告诉你”PCQMZKBBKGGQWFTJJ“
+flag{XXX}
