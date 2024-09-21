@@ -7,7 +7,7 @@ int main()
     char op;
     printf("请输入运算符：");
     scanf(" %c", &op);
-    if (op == '+') {
+    if (op = '+') {
         printf("%d + %d = %d\n", a, b, a + b);
     } else if (op == '-') {
         printf("%d - %d = %d\n", a, b, a - b);

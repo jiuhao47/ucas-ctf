@@ -12,6 +12,8 @@ int a = 10;
 <details>
 <summary>int 类型的变种</summary>
 
+<div markdown="1">
+
 包括 `int`，`short`，`long`，`long long`，以及它们的无符号版本 `unsigned int`，`unsigned short`，`unsigned long`，`unsigned long long`。
 ```c
 int var_int;  
@@ -23,6 +25,7 @@ unsigned short var_unsigned_short;
 unsigned long var_unsigned_long; 
 unsigned long long var_unsigned_long_long; 
 ```
+</div>
 
 </details>
 
@@ -35,6 +38,8 @@ float b = 3.14;
 <details> 
 <summary>浮点型的变种</summary>
 
+<div markdown="1">
+
 包括 `float`，`double`，`long double`。
 
 ```c
@@ -43,6 +48,7 @@ double var_double;
 long double var_long_double;
 ```
 
+</div>
 </details>
 
 ### 字符型
@@ -54,18 +60,20 @@ char c = 'A';
 <details>
 <summary>字符型的变种</summary>
 
+<div markdown="1">
+
 `char`，以及它的无符号版本 `unsigned char`。
 
 ```c
 char var_char; 
 unsigned char var_unsigned_char; 
 ```
+
+</div>
 </details>
 
 ### 其他基本变量类型
 
-<details>
-<summary>其他基本变量类型</summary>
 
 `bool`（需要包含头文件 `stdbool.h`）。
 
@@ -87,8 +95,7 @@ enum color { red, green, blue };
 enum color var_color;
 ```
 
-</details>
-
+### 变量-内存
 
 ## 语句
 
@@ -99,6 +106,8 @@ a = a + 1;
 
 <details>
 <summary>其他的语句样式</summary>
+
+<div markdown="1">
 
 ```c
 int a,b,c;
@@ -112,6 +121,8 @@ a,b,c;
 ;
 a+=a,b,c++;
 ```
+
+</div>
 </details>
 
 ## 注释
@@ -145,16 +156,18 @@ a+=a,b,c++;
 <details>
 <summary>更多运算符</summary>
 
-- 位运算符：&, |, ^, ~, <<, >>
+<div markdown="1">
+
+- 位运算符：&, \|, ^, ~, <<, >>
     - &: 与
-    - |: 或
+    - \|: 或
     - ^: 异或
     - ~: 取反
     - <<: 左移
     - \>>: 右移
-- 逻辑运算符：&&, ||, !
+- 逻辑运算符：&&, \|\|, !
     - &&: 与
-    - ||: 或
+    - \|\|: 或
     - !: 非
 - 赋值运算符：=, +=, -=, *=, /=, %=
     - +=: 加后赋值
@@ -168,6 +181,8 @@ a+=a,b,c++;
     - &: 取地址
     - *: 取值
     - ->: 结构体指针访问成员
+
+</div>
 </details>
 
 ## 基础库函数
@@ -233,6 +248,7 @@ int main()
 
 ## 条件与循环
 
+
 ### 条件语句
 
 #### if 语句
@@ -268,6 +284,8 @@ if (condition1) {
 <details>
 <summary>条件语句的嵌套</summary>
 
+<div markdown="1">
+
 ```c
 if (condition1) {
     if (condition2) {
@@ -279,11 +297,13 @@ if (condition1) {
     // code
 }
 ```
-
+</div>
 </details>
 
 <details>
 <summary>不完整条件语句</summary>
+
+<div markdown="1">
 
 ```c
 if (condition1) {
@@ -294,8 +314,14 @@ else if(condition2) {
 }
 
 ```
-
+</div>
 </details>
+
+#### 流程图/控制流图
+
+[流程图](https://zh.wikipedia.org/wiki/%E6%B5%81%E7%A8%8B%E5%9B%BE)
+
+[控制流图]（https://zh.wikipedia.org/wiki/%E6%8E%A7%E5%88%B6%E6%B5%81%E5%9C%96）
 
 #### 示例程序——加、减、乘计算器
 ```c
@@ -342,6 +368,8 @@ do {
 <details>
 <summary>while 和 do-while 的区别</summary>
 
+<div markdown="1">
+
 ```c
 int i = 0;
 while (i > 0) {
@@ -361,9 +389,8 @@ do {
 // do-while 会先执行一次循环体，再判断循环条件
 // while 先判断循环条件，再执行循环体
 ```
-
+</div>
 </details>
-
 
 #### for 循环
 
@@ -384,6 +411,8 @@ for (int i = 0; i < 10; i++) {
 <details>   
 <summary>循环语句的嵌套</summary>
 
+<div markdown="1">
+
 ```c
 for (int i = 0; i < 10; i++) {
     for (int j = 0; j < 10; j++) {
@@ -392,11 +421,15 @@ for (int i = 0; i < 10; i++) {
 }
 ```
 
+</div>
+
 </details>
 
 
 <details>
 <summary>死循环</summary>
+
+<div markdown="1">
 
 ```c
 for (;;) {
@@ -411,7 +444,7 @@ do {
     // code
 } while (1);
 ```
-
+</div>
 </details>
 
 #### 示例程序——1-10000的累加
