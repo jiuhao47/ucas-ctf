@@ -1,14 +1,17 @@
 #!/usr/bin/python
-from ctypes import *
 from pwn import *
 
-solver = CDLL("./solve.so")
 context.arch = "amd64"
-r = remote("124.16.75.117", 51002)
+# context.log_level="debug"
+r = remote("124.16.75.117", 51008)
 r.recvuntil(b"Challenge: ")
 line1 = r.recvline(keepends=False)
-print(line1)
-answer = solver.solve(line1)
+expression = line1.decode("utf-8")
+answer = eval(expression)
 print(answer)
-r.sendline(str(answer))
+# to bytes
+answer = str(answer).encode("utf-8")
+r.sendline(answer)
 r.interactive()
+
+
