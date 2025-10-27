@@ -4,8 +4,11 @@ from pwn import *
 context.log_level = "debug"
 
 context.arch = "i386"
+context.terminal = ["tmux", "splitw", "-h"]
+# context.gdb = "/usr/local/bin/pwndbg"
+
 r = process("./vuln")
-# r = remote("124.16.75.117", 51008)
+# r = remote("124.16.75.117", 51001)
 
 
 buf_len = 180
